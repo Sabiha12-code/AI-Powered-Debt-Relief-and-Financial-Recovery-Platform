@@ -1,0 +1,418 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: fadeIn 0.4s ease;
+}
+
+/* ================= HEADER ================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(145deg, #111827, #0f172a);
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 26px;
+  color: white;
+  font-weight: 700;
+}
+
+.header p {
+  margin-top: 6px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.aiStatus {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(56, 189, 248, 0.08);
+  color: #38bdf8;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.greenDot {
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #22c55e;
+}
+
+/* ================= METRIC CARDS ================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(145deg, #111827, #0f172a);
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 22px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.cardTitle {
+  color: #94a3b8;
+  font-size: 13px;
+  margin: 0 0 8px 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.value {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.primary { color: #38bdf8; }
+.success { color: #22c55e; }
+.warning { color: #f59e0b; }
+.danger { color: #ef4444; }
+
+/* ================= CENTRAL LAYOUT SPLIT ================= */
+.middleSection {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 20px;
+}
+
+.chartCard,
+.recommendationCard,
+.tableCard,
+.quickSection {
+  background: linear-gradient(145deg, #111827, #0f172a);
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.chartCard h2,
+.recommendationCard h2,
+.tableCard h2,
+.quickSection h2 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ================= LINEAR TRACK METERS ================= */
+.meterContainer {
+  margin: 20px 0 16px 0;
+}
+
+.meterTrack {
+  width: 100%;
+  height: 10px;
+  background-color: #1f2937;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.meterFill {
+  height: 100%;
+  background: linear-gradient(to right, #38bdf8, #2563eb);
+  border-radius: 6px 0 0 6px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.meterLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 10px;
+}
+
+.legendContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 14px;
+  background-color: rgba(15, 23, 42, 0.6);
+  border-radius: 12px;
+  border: 1px solid #1f2937;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.legendIndicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.bgDebt { background-color: #38bdf8; }
+.bgRunway { background-color: #1f2937; }
+
+.legendDetails {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.legendLabel {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.legendValue {
+  font-size: 13px;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.chartFooterText {
+  color: #64748b !important;
+  font-size: 12px;
+  margin: 8px 0 0 0;
+}
+
+/* ================= MICRO-CONTAINER CRADLE (TASK A) ================= */
+.aiMicroContainer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 40px);
+  justify-content: center;
+}
+
+.aiMicroCard {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  background: #0b1120;
+  border: 1px solid #1f2937;
+  padding: 20px;
+  border-radius: 12px;
+  align-items: center;
+}
+
+.aiMicroLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.aiTag {
+  align-self: flex-start;
+  font-size: 10px;
+  font-weight: 700;
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+  padding: 4px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.aiTagVariant {
+  align-self: flex-start;
+  font-size: 10px;
+  font-weight: 700;
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  padding: 4px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.aiMicroLeft h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.aiMicroLeft p {
+  margin: 0;
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.aiMicroRight {
+  display: flex;
+  align-items: center;
+}
+
+.metaCapsule {
+  background: rgba(56, 189, 248, 0.05);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  padding: 12px 16px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 90px;
+}
+
+.metaCapsuleVariant {
+  background: rgba(34, 197, 94, 0.05);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+  padding: 12px 16px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 90px;
+}
+
+.metaLabel {
+  display: block;
+  font-size: 10px;
+  color: #64748b;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.metaValue {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* ================= QUICK ACTIONS GRID ================= */
+.quickGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.quickGrid button {
+  background: #111827;
+  border: 1px solid #1f2937;
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.quickGrid button:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.08);
+}
+
+.quickGrid button:active {
+  transform: translateY(0);
+}
+
+/* ================= DATA GRID INTERFACE ================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  color: #94a3b8;
+  text-align: left;
+  padding: 14px;
+  font-weight: 600;
+  font-size: 13px;
+  border-bottom: 1px solid #1f2937;
+}
+
+td {
+  padding: 14px;
+  border-bottom: 1px solid #1f2937;
+  color: #f1f5f9;
+  font-size: 14px;
+}
+
+.severityHigh {
+  font-size: 11px;
+  font-weight: 700;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.deleteBtn {
+  background: transparent;
+  color: #64748b;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.deleteBtn:hover {
+  color: #ef4444;
+}
+
+/* ================= PREMIUM CALIBRATED CONTROLS (TASK C) ================= */
+.linkBtn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(56, 189, 248, 0.06) !important;
+  color: #38bdf8 !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.linkBtn:hover {
+  background: rgba(56, 189, 248, 0.15) !important;
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.25) !important;
+}
+
+.linkBtn:active {
+  transform: scale(0.96) !important;
+}
+
+/* ================= VIEWPORT MEDIA RESPONSIVENESS ================= */
+@media(max-width: 1200px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .middleSection { grid-template-columns: 1fr; }
+  .quickGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(max-width: 768px) {
+  .header { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .cards { grid-template-columns: 1fr; }
+  .quickGrid { grid-template-columns: 1fr; }
+  .tableCard { overflow-x: auto; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

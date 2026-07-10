@@ -1,0 +1,90 @@
+.contentContainer {
+  padding: 2rem;
+  color: #f8fafc;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.contentHeader {
+  margin-bottom: 2.5rem;
+}
+
+.mainHeadingTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.subHeadingDescription {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+/* INTERACTIVE CORE CARD BASE STRUCTURE */
+.cardLayout {
+  background: #0f172a;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  
+  /* Smooth hardware-accelerated property transitions */
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
+              border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* MODERN USER INTERACTIVE HOVER EFFECT */
+.cardLayout:hover {
+  transform: translateY(-2px); /* Subtle elevate, not extreme */
+  border-color: #3b82f6; /* Shift border to primary branding blue */
+  /* Soft, deep ambient background blue sheen on hover */
+  box-shadow: 0 10px 30px -15px rgba(59, 130, 246, 0.2); 
+}
+
+/* STABLE BACKLIGHT GLOW WHEN PRESSED/CLICKED */
+.cardLayout:active {
+  transform: translateY(0px); /* Returns down cleanly upon physical click compression */
+  border-color: #60a5fa;
+  /* Deep, radiant high-contrast neon-blue ambient glow */
+  box-shadow: 0 0 25px 2px rgba(37, 99, 235, 0.45), 
+              0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* ADJUSTED OPTIMIZATION ROW MATRICES */
+.optimizationGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .optimizationGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.subCardItem {
+  background: #020617;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #1e293b;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Inner card sub-hover indicator matching the outer glow container */
+.cardLayout:hover .subCardItem {
+  border-color: #1e293b;
+}
+
+.subCardItem:hover {
+  border-color: #2563eb;
+  background: #070f24;
+}

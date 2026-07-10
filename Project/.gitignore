@@ -1,0 +1,23 @@
+# Virtual Environment
+venv/
+ENV/
+.env
+*.env
+
+# Python Caches & Build Artifacts
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node Modules & Frontend Builds
+node_modules/
+dist/
+build/
+
+# IDES and Editors
+.vscode/
+.idea/
+
+# Databases
+*.db
+*.sqlite3

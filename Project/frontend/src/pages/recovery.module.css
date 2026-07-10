@@ -1,0 +1,225 @@
+.recoveryPage {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-family: inherit;
+  color: #f8fafc;
+}
+
+/* HEADER STYLE */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: #fff;
+}
+
+.header p {
+  font-size: 14px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.aiBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(34, 197, 94, 0.1);
+  color: #4ade80;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.pulseDot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  animation: pulse 1.6s infinite;
+}
+
+/* SECTION 1: COMPARISON CARDS */
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 28px;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.beforeCard {
+  border-left: 5px solid #ef4444;
+}
+
+.afterCard {
+  border-left: 5px solid #22c55e;
+  background: linear-gradient(145deg, #1e293b 0%, #151f32 100%);
+}
+
+.card h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 24px 0;
+}
+
+.beforeCard h2 { color: #f87171; }
+.afterCard h2 { color: #4ade80; }
+
+.pointsList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.pointItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 13px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.beforeIcon {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+}
+
+.afterIcon {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+}
+
+.pointContent h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: #e2e8f0;
+}
+
+.pointContent p {
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* SECTION 2: SUMMARY CARD */
+.summaryCard {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 32px;
+  border: 1px solid #334155;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.summaryTitleContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.summaryTitleContainer h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+}
+
+.aiSparkle {
+  color: #38bdf8;
+  font-size: 18px;
+}
+
+.summaryText {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin: 0;
+  max-width: 800px;
+}
+
+.metricsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 24px;
+}
+
+.metricBox {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.metricLabel {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+}
+
+.metricValue {
+  font-size: 24px;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.metricValueSuccess {
+  color: #4ade80;
+}
+
+.statusPill {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 4px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}

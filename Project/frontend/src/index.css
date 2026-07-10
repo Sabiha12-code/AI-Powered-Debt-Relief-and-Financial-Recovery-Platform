@@ -1,0 +1,74 @@
+/* =========================
+   GLOBAL VARIABLES
+========================= */
+:root {
+  --bg-dark: #050814;
+  --bg-card: #111827;
+
+  --accent-blue: #3b82f6;
+  --accent-cyan: #06b6d4;
+
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+
+  --border-color: #1f2937;
+
+  --focus-ring: #3b82f6;
+
+  --transition-smooth: all 0.3s ease;
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   HTML & BODY
+========================= */
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: radial-gradient(circle at top, #0b1120, #050814);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+a:hover {
+  color: var(--text-main);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  font-family: inherit;
+}
+
+/* =========================
+   INPUTS
+========================= */
+input,
+textarea,
+select {
+  font-family: inherit;
+}

@@ -1,0 +1,209 @@
+main {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: row;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+  }
+  .heroPane {
+    display: none !important;
+  }
+  .formPane {
+    flex: 1 !important;
+    width: 100%;
+  }
+}
+
+.heroPane {
+  flex: 1.2;
+  background: radial-gradient(circle at top left, #1e1b4b, var(--bg-dark));
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid var(--border-color);
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, var(--accent-cyan), var(--accent-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroDesc {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 500px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.statCard {
+  background-color: rgba(13, 21, 39, 0.6);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: var(--transition-smooth);
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-blue);
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.15);
+}
+
+.statCard h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+.cyan { color: var(--accent-cyan); }
+.blue { color: var(--accent-blue); }
+.white { color: var(--text-main); }
+
+.statCard p {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.formPane {
+  flex: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #080d1a;
+}
+
+.formWrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+.formHeader {
+  margin-bottom: 2rem;
+}
+
+.formHeader h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.formHeader p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Updated Task 1 Segment: Structured Flex Container */
+.toggleContainer {
+  display: flex;
+  gap: 0.5rem;
+  background-color: rgba(13, 21, 39, 0.8);
+  padding: 0.375rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-color);
+}
+
+/* Updated Task 1 Segment: Elegant Separation Base Styles */
+.toggleBtn {
+  flex: 1;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggleBtn:hover {
+  color: var(--text-main);
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Updated Task 1 Segment: Distinct active tab deep dark theme profiles */
+.toggleBtn.active {
+  background-color: #1e293b;
+  border-color: #334155;
+  color: var(--accent-cyan);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+}
+
+.inputGroup label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.inputGroup input {
+  width: 100%;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: var(--transition-smooth);
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: var(--focus-ring);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.submitBtn {
+  width: 100%;
+  background: linear-gradient(to right, var(--accent-blue), #1d4ed8);
+  color: white;
+  border: none;
+  padding: 0.85rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.submitBtn:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.submitBtn:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+.errorText {
+  color: #f87171;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
