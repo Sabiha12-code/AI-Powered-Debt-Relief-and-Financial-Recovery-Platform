@@ -145,16 +145,6 @@ pytest -v
 
 ---
 
-## 📷 Application Screenshots
-
-- Login Page
-- Dashboard
-- Financial Analysis
-- Recovery Matrix
-- Guidance & Compliance
-
----
-
 ## 🌟 Future Enhancements
 
 - Cloud Deployment
